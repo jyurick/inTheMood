@@ -1,1 +1,1 @@
-# inTheMood
+# InTheMood

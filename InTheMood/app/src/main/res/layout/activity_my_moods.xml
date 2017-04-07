@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.widget.RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.austin.inthemood.MyMoods">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/txt_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:paddingLeft="16dp"
+                android:text="My Moods"
+                android:textColor="@android:color/white"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <ImageButton
+                android:id="@+id/newMoodImg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="11dp"
+                android:layout_marginRight="11dp"
+                android:layout_toLeftOf="@+id/mapImg"
+                android:layout_toStartOf="@+id/mapImg"
+                android:background="@android:color/transparent"
+                android:paddingLeft="100dp"
+                app:srcCompat="@android:drawable/ic_menu_add" />
+
+            <ImageButton
+                android:id="@+id/mapImg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="14dp"
+                android:layout_marginRight="14dp"
+                android:layout_toLeftOf="@+id/calendarImg"
+                android:layout_toStartOf="@+id/calendarImg"
+                android:background="@android:color/transparent"
+                app:srcCompat="@android:drawable/ic_dialog_map" />
+
+            <ImageButton
+                android:id="@+id/calendarImg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignTop="@+id/mapImg"
+                android:layout_marginEnd="25dp"
+                android:layout_marginRight="25dp"
+                android:background="@android:color/transparent"
+                app:srcCompat="@android:drawable/ic_menu_my_calendar" />
+
+        </android.support.v7.widget.Toolbar>
+    </android.support.design.widget.AppBarLayout>
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:text="Filter Moods By:"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_below="@+id/appBarLayout"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <RadioGroup
+        android:id="@+id/filterButtons"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textView6"
+        android:layout_below="@+id/textView6"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:checkedButton="@+id/noFilterButton">
+        <RadioButton
+            android:id="@+id/emotionalStateFilterButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textView6"
+            android:text="Emotional State" />
+
+        <RadioButton
+            android:id="@+id/weekFilterButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/emotionalStateFilterButton"
+            android:layout_marginTop="14dp"
+            android:text="Occured Last Week" />
+
+        <RadioButton
+            android:id="@+id/triggerFilterButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/weekFilterButton"
+            android:layout_marginTop="13dp"
+            android:text="Trigger" />
+        <RadioButton
+            android:id="@+id/noFilterButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/triggerFilterEditText"
+            android:layout_marginTop="12dp"
+            android:text="No Filter"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textView6" />
+    </RadioGroup>
+
+    <Spinner
+        android:id="@+id/moodFilterSpinner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/filterButtons"
+        android:layout_centerHorizontal="true" />
+
+
+    <EditText
+        android:id="@+id/triggerFilterEditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:layout_marginBottom="41dp"
+        android:layout_above="@+id/myMoodsListView"
+        android:layout_alignLeft="@+id/moodFilterSpinner"
+        android:layout_alignStart="@+id/moodFilterSpinner"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <ListView
+        android:id="@+id/myMoodsListView"
+        android:layout_width="match_parent"
+        android:layout_height="260dp"
+        android:layout_below="@+id/filterButtons"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="23dp" />
+
+
+
+
+</android.widget.RelativeLayout>

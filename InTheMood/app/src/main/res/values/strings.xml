@@ -1,0 +1,57 @@
+<resources>
+    <string name="app_name">InTheMood</string>
+    <string name="title_activity_existing_user_login">Sign in</string>
+    <string name="title_activity_new_user_login">New User Registration</string>
+
+    <!-- Strings related to login -->
+    <string name="prompt_user">User Name</string>
+    <string name="button_login">Log In</string>
+    <string name="eLogin0">Username or password is incorrect</string>
+
+    <!-- Strings related to registration -->
+    <string name="confirm_password">Confirm Password</string>
+    <string name="button_register">Register</string>
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="error_invalid_email">This email address is invalid</string>
+    <string name="error_invalid_password">This password is too short</string>
+    <string name="error_incorrect_password">This password is incorrect</string>
+    <string name="error_field_required">This field is required</string>
+    <string name="permission_rationale">"Contacts permissions are needed for providing email
+        completions."
+    </string>
+
+    <string name="eUser0">username error</string>
+    <string name="eUser1">Username is empty</string>
+    <string name="eUser2">Username is taken</string>
+    <string name="ePass0">password error</string>
+    <string name="ePass1">Password is empty</string>
+    <string name="ePass2">Password confirmation failed</string>
+
+    <string name="current_mood">Current Mood</string>
+    <string name="trigger">Trigger</string>
+    <string name="search_by_email">Search by Name</string>
+
+    <string-array name="moods">
+        <item>Anger</item>
+        <item>Confusion</item>
+        <item>Disgust</item>
+        <item>Fear</item>
+        <item>Happiness</item>
+        <item>Sadness</item>
+        <item>Shame</item>
+        <item>Surprise</item>
+    </string-array>
+
+    <string-array name="social_situations">
+        <item>Alone</item>
+        <item>With one other person</item>
+        <item>With two to several people</item>
+        <item>With a crowd</item>
+    </string-array>
+    <string name="title_activity_mood_calendar">Mood Calendar</string>
+
+
+</resources>
